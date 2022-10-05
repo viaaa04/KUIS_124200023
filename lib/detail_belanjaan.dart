@@ -38,7 +38,7 @@ class DetailScreenMobile extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: [
-                Image.asset(place.productImage),
+                Image.asset(place.productImageUrls[0]),
                 SafeArea(
                   child: Padding(
                     padding: EdgeInsets.all(8.0),
@@ -202,7 +202,7 @@ class _DetailScreenWebState extends State<DetailScreenWeb> {
                           child: Column(
                             children: [
                               ClipRRect(
-                                child: Image.asset(widget.place.stock),
+                                child: Image.asset(widget.place.productImageUrls[0]),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               SizedBox(height: 16),

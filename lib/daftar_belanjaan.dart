@@ -42,7 +42,7 @@ class GroceryList extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Expanded(flex: 1, child: Image.asset(place.productImage)),
+                Expanded(flex: 1, child: Image.asset(place.productImageUrls[0])),
                 Expanded(
                     flex: 2,
                     child: Padding(
@@ -100,8 +100,8 @@ class GroceryGrid extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Expanded(
-                        child: Image.asset(
-                          place.stock,
+                        child: Image.network(
+                          place.productImageUrls[0],
                           fit: BoxFit.cover,
                         )),
                     SizedBox(
